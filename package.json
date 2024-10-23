@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode=development",
-    "build": "webpack --mode=production",
+    "start": "webpack serve --env local",
+    "dev": "webpack serve --env development",
+    "production": "webpack serve --env production",
+    "build": "webpack --env production",
     "test": "test"
   },
   "author": "Jekin Gohel",
