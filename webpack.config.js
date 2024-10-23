@@ -16,7 +16,7 @@ module.exports = (env) => {
      * the environment - development, production, none. tells webpack
      * to use its built-in optimizations accordingly. default is production
      */
-    mode: env.production ? 'production' : 'development',
+    mode: env.production ? "production" : "development",
     /** "entry"
      * the entry point
      */
@@ -76,6 +76,27 @@ module.exports = (env) => {
        * being searched"
        */
       rules: [
+        {
+          test: /\.scss$/, // Check for .scss files
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: "style-loader",
+            },
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        },
         {
           test: /\.(js|jsx)$/, //kind of file extension this rule should look for and apply in test
           exclude: /node_modules/, //folder to be excluded
