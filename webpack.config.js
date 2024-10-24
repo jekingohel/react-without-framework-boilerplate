@@ -66,6 +66,9 @@ module.exports = (env) => {
        * resolve the one with the extension listed first in the array and skip the rest.
        * This is what enables users to leave off the extension when importing
        */
+      alias: {
+        '@styles': path.resolve(__dirname, 'src/styles'), // Alias for styles
+      },
       extensions: [".js", ".jsx", ".json"],
     },
     module: {

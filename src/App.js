@@ -1,5 +1,5 @@
 import React from "react";
-import './styles/index.scss';
+import '@styles/index.scss';
 
 const App = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
